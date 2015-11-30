@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- defaultdir设置装饰页 -->
+<decorators defaultdir="/decorators">
+  <decorator name="basic-theme" page="basic-theme.jsp">
+        <pattern>/*</pattern>
+   </decorator>
+   <excludes>
+    <pattern>/excludes/*</pattern>
+    <!--  
+    <pattern>*/exclude/*</pattern> 任何资源，只要在exclude中就不装饰
+    	
+    <pattern>/data/plaintext/*</pattern>跟路径下data文件下的plaintext下的任何文件不装饰
+    
+    <pattern>*.txt</pattern>文件以txt结尾的不装饰
+    -->
+  </excludes>
+  <!-- 可以定义多个装饰，页面可以用<meta content="simple" name="decorator" />引入 -->
+   <decorator name="simple" page="simple.jsp">
+   </decorator>
+   <decorator name="print" page="print.jsp">
+   	<pattern>/*</pattern>
+   </decorator>
+</decorators>
